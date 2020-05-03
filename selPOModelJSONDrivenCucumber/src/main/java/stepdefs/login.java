@@ -26,9 +26,10 @@ public class login {
 	    @Given("^I have user name and password$")
 	    public void i_have_user_name_and_password() throws Throwable {
 		 // Write code here that turns the phrase above into concrete actions
-	    	System.setProperty("webdriver.chrome.driver","C:\\Eclipse\\AutTraining\\chromedriver.exe");
-			
-			    driver = new ChromeDriver();
+	    //	System.setProperty("webdriver.chrome.driver","C:\\Eclipse\\AutTraining\\chromedriver.exe");
+			WebDriverManager.chromedriver().version("80").setup();
+			   // driver = new ChromeDriver();
+			   WebDriver driver = new ChromeDriver();
 
 		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
